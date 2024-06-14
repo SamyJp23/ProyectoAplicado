@@ -1,4 +1,5 @@
 ﻿@page "/Ventana/Login"
+@inject NavigationManager navigationManager
 <h3>Login</h3>
 
 <div class="container">
@@ -27,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group text-center mb-3">
-                                    <button type="button" class="btn btn-block btn-iniciar">Iniciar Sesión</button>
+                                    <button type="button" class="btn btn-block btn-iniciar" @onclick="Inicio">Iniciar Sesión</button>
                                 </div>
                                 <div class="form-group text-center">
                                     <button type="button" class="btn btn-block btn-registro">Registrarse</button>
@@ -46,5 +47,8 @@
 
 
 @code {
-
+    public void Inicio()
+    {
+        navigationManager.NavigateTo("/");
+    }
 }
