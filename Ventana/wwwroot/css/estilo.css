@@ -1,85 +1,35 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f2f2f2;
-    color: #333;
+﻿/* styles.css */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-.btn-iniciar,
-.btn-registro {
+.row {
+    margin-bottom: 15px;
+}
+
+.form-control, .form-control-file, .form-select {
     width: 100%;
-    height: 35px;
-    border-radius: 0;
-    padding: 3px 10px;
-    font-size: 16px;
-    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
     margin-bottom: 5px;
-
+    display: block;
 }
 
-.btn-iniciar {
-    background-color: #023E8A;
-    color: #fff;
-    margin-bottom: 0px;
+input[type="file"] {
+    padding: 5px;
 }
 
-.btn-registro {
-    background-color: #0077B6;
-    color: #fff;
-    margin-bottom: 0px;
-}
-
-.form-control {
-    border: none;
-    border-bottom: 1px solid #ced4da;
-    border-radius: 0;
-    padding: 0;
-    background-color: transparent;
-}
-
-.move-down {
-    margin-top: 50px; 
-}
-
-.card {
-    border: none; 
-}
-
-.image-card {
-    min-height: 60vh; 
-    background-color: #03045E; 
-    margin-bottom: 10px; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-}
-
-    .image-card .card-body {
-        height: 100%; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-.input-space {
-    margin-bottom: 10px; 
-    text-align: center; 
-}
-
-.password-input {
-    margin-bottom: 20px; 
-    text-align: center; 
-}
-.btn-redondeado {
-    border-radius: 12px;
-}
 .card-body {
     min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.btn-redondeado {
-    border-radius: 12px;
 }
