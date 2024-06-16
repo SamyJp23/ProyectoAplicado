@@ -1,0 +1,163 @@
+﻿@page "/Ventana/Oly"
+<h3>Oly</h3>
+
+<div class="container">
+    <div class="navmenu">
+        <div class="profile-picture bg-secondary">
+            <img src="descarga.jpeg" alt="Perfil" />
+        </div>
+        <div class="info-section">
+            <div class="info-item">
+                <strong class="text-primero">Matricula:</strong>
+                <span class="text-segundo">@student.Matricula</span>
+            </div>
+            <div class="info-item">
+                <strong class="text-primero">Carrera:</strong>
+                <span class="text-segundo">@student.Carrera</span>
+            </div>
+            <div class="info-item">
+                <strong class="text-primero">Semestre Actual:</strong>
+                <span class="text-segundo">@student.SemestreActual</span>
+            </div>
+            <div class="info-item">
+                <strong class="text-primero">Indice Acumulado:</strong>
+                <span class="text-segundo">@student.IndiceAcumulado</span>
+            </div>
+        </div>
+        <a class="btn btn-primary" role="button">Editar</a>
+    </div>
+    <div class="main-panel">
+
+        <div class="info-item">
+            <strong class="text-primero">Nombre Completo:</strong>
+            <span class="text-segundo">@student.NombreCompleto</span>
+        </div>
+        <div class="info-item">
+            <strong class="text-primero">Fecha de Nacimiento:</strong>
+            <span class="text-segundo">@student.FechaNacimiento</span>
+        </div>
+        <div class="info-item">
+            <strong class="text-primero">Correo Personal:</strong>
+            <span class="text-segundo">@student.CorreoPersonal</span>
+        </div>
+        <div class="info-item">
+            <strong class="text-primero">Correo Institucional:</strong>
+            <span class="text-segundo">@student.CorreoInstitucional</span>
+        </div>
+        <div class="info-item">
+            <strong class="text-primero">Teléfono:</strong>
+            <span class="text-segundo">@student.Telefono</span>
+            <strong class="text-primero">Celular:</strong>
+            <span class="text-segundo">@student.Celular</span>
+        </div>
+        <div class="info-item">
+            <strong class="text-primero">Dirección:</strong>
+            <span class="text-segundo">@student.Direccion</span>
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+    .container {
+        display: flex;
+    }
+
+    .navmenu {
+        width: 250px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-panel {
+        flex: 1;
+        background-color: #ffffff;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    .profile-picture {
+        width: 200px;
+        height: 165px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+    .info-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-item {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .info-item strong {
+            margin-right: 10px;
+        }
+
+        .info-item span {
+            flex: 1;
+        }
+</style>
+
+@code {
+
+
+    private Student student;
+
+    protected override void OnInitialized()
+    {
+        // Inicializar con datos de ejemplo
+        student = new Student
+            {
+                Matricula = "2023123456",
+                Carrera = "Ingeniería en Sistemas",
+                SemestreActual = "6",
+                IndiceAcumulado = "3.8",
+                NombreCompleto = "Fulanito de Tal",
+                FechaNacimiento = "28/06/2001",
+                CorreoPersonal = "fulanodetal@gmail.com",
+                CorreoInstitucional = "fulanito@universidad.edu",
+                Telefono = "(809)-123-4567",
+                Celular = "(849)-123-4567",
+                Direccion = "Calle Jose Contrera de Oscord Casa #5, Avenida Principal, Cenovi, Sabana Rey"
+            };
+    }
+    public class Student
+    {
+        public string Matricula { get; set; }
+        public string Carrera { get; set; }
+        public string SemestreActual { get; set; }
+        public string IndiceAcumulado { get; set; }
+        public string NombreCompleto { get; set; }
+        public string FechaNacimiento { get; set; }
+        public string CorreoPersonal { get; set; }
+        public string CorreoInstitucional { get; set; }
+        public string Telefono { get; set; }
+        public string Celular { get; set; }
+        public string Direccion { get; set; }
+    }
+}
+
+@code {
+
+}

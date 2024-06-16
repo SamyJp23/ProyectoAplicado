@@ -70,11 +70,16 @@
     margin-bottom: 20px; 
     text-align: center; 
 }
-
+.btn-redondeado {
+    border-radius: 12px;
+}
 .card-body {
     min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.btn-redondeado {
+    border-radius: 12px;
 }
